@@ -1,0 +1,158 @@
+<!doctype html>
+ <head>
+  <title>회원가입 페이지</title>
+  <style>
+	body{
+		background:#efefef;
+		font-family:"나눔고딕";
+		font-size:15px;
+	}
+	fieldset{
+		background:#fff;
+		width:650px;
+		padding:0px;
+		border:1px solid #ddd;
+	}
+	legend{
+		width:1px; height:1px;
+		padding:0;
+		overflow:hidden;
+	}
+	
+	table{
+		width:100%;
+	}
+
+	td,th{
+		padding:10px;
+		border-bottom:1px solid #efefef;
+	}
+	th{
+		border-right:1px solid #efefef;
+		width:150px;
+	}
+
+	tr:last-of-type th{
+		border-bottom:none;
+	}
+	tr:last-of-type td{
+		border-bottom:none;
+	}
+
+
+
+	input[type="text"],input[type="password"],select{
+		padding:7px; border:1px solid #ddd;
+	}
+	
+	div.submit-box{
+		width:650px;
+		margin-top:30px;
+		text-align:center;
+	}
+	button[type="submit"]{
+		padding:10px;
+		background:#fff;
+		font-weight:bold; font-size:15px;
+		border:1px solid #ddd;
+	}
+
+  </style>
+ </head>
+ <body>
+  <head>
+	<h1>회원가입</h1>
+  </head>
+  <main>
+	<form name="register" action="form.php" method="post">
+	<h2>필수 입력 항목</h2>
+	<fieldset>
+		<legend>필수 입력 항목</legend>
+		<table class="register-form-table" cellspacing="0" cellpadding="0">
+			<tr>
+				<th scope="row"><label for="name">이름</label></th>
+				<td>
+					<input type="text" name="name" id="name" size="10" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="pw">비밀번호</label></th>
+				<td>
+					<input type="password" name="pw" id="pw" size="20" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="pw-confirm">비밀번호 확인</label></th>
+				<td>
+					<input type="password" name="pw-confirm" id="pw-confirm" size="20" />
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="email1">이메일</label></th>
+				<td>
+					<input type="text" name="email1" id="email1" size="15" /> @
+					<input type="text" name="email2" id="email2" size="15" />
+					<select name="email-select" onchange="document.getElementById('email2').value=this.value">
+						<option value="">직접입력</option>
+						<option value="naver.com">네이버</option>
+						<option value="google.com">G메일</option>
+						<option value="hanmail.net">한메일</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="phone1">전화번호</label></th>
+				<td>
+					<select name="phone1">
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+					</select> - 
+					<input type="text" name="phone2" id="phone2" size="4" /> -
+					<input type="text" name="phone3" id="phone3" size="4" />
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+
+	<h2>부가 입력 항목</h2>
+	<fieldset>
+		<legend>부가 입력 항목</legend>
+		<table class="register-form-table" cellspacing="0" cellpadding="0">
+			<tr>
+				<th scope="row"><label for="birth-year">생년월일</label></th>
+				<td>
+					<input type="text" name="birth-year" id="birth-year" size="4" /> <label for="birth-year">년</label>
+					<input type="text" name="birth-month" id="birth-month" size="2" /> <label for="birth-month">월</label>
+					<input type="text" name="birth-day" id="birth-day" size="2" /> <label for="birth-day">일</label>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="gender-man">성별</label></th>
+				<td>
+					<input type="radio" name="gender" id="gender-man" value="man" /> <label for="gender-man">남성</label>
+					<input type="radio" name="gender" id="gender-woman" value="woman" /> <label for="gender-woman">여성</label>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><label for="addr">주소</label></th>
+				<td>
+					<input type="text" name="addr" id="addr" />
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+
+	<div class="submit-box">
+	<!-- #봇 회원가입 방지 트릭
+		<input type="text" name="axvaesfzdx" tabindex="-1" value="" />
+	-->
+		<button type="submit">회원가입</button>
+	</div>
+	</form>
+  </main>
+  <footer>
+  </footer>
+ </body>
+</html>
