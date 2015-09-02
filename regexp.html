@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	/*
+		var num = "1123";
+				
+		console.log(parseInt(num));
+	*/
+
+	/*
+		var num = "0041908132";
+
+		console.log(reg.test(num));
+		console.log(num);
+	*/
+
+	/*
+		var url = "http://naver.com/asdf/ikjk?jkjl=jj&c=g";
+		var reg = 
+
+		console.log(reg.test(url));
+		console.log(reg.exec(url));
+	*/
+
+		window.addEventListener(
+			"load",
+			function(event){
+				console.log("load")
+			}
+		)
+
+		document.addEventListener(
+			"DOMContentLoaded",
+			function(event){
+				console.log("DOMContentLoaded");
+			}
+		)
+
+		document.addEventListener(
+			"readystatechange",
+			function(event){
+				console.log("readyState : "+document.readyState);
+			}
+		)
+
+	</script>
+	<body>
+	<section>
+		<input type="text" id="number" >
+		<button id="parse-int">parseInt()</button>
+		<p>
+		<span label="number">숫자를 입력하세요</span>
+		</p>
+
+		<input type="text" id="phone" >
+		<p>
+		<span label="phone">휴대전화번호를 입력하세요</span>
+		</p>
+
+		<input type="text" id="url" >
+		<p>
+		<span label="url">url을 입력하세요</span>
+		</p>
+	</section>
+
+
+	<script>
+		var number = document.getElementById("number");
+		var btn = document.getElementById("parse-int");
+		var numberLabel = document.querySelector("span[label='number']");
+
+		number.addEventListener(
+			"keyup",
+			function(event){
+				var value = event.target.value;
+				var reg = /^(\d+)(.*)$/;
+
+				if(reg.test(value)){
+					numberLabel.innerHTML = "parseInt 형식에 부합합니다";
+				}else{
+					numberLabel.innerHTML = "parseInt 형식에 부합하지 않습니다";
+				}
+			}
+		)
+
+		btn.addEventListener(
+			"click",
+			function(event){
+				numberLabel.innerHTML = parseInt(number.value);
+			}
+		)
+
+		var phone = document.getElementById("phone");
+		var phoneLabel = document.querySelector("span[label='phone']");
+
+		phone.addEventListener(
+			"keyup",
+			function(event){
+				var value = event.target.value;
+				var reg = /^(\d{2,3})(-?)(\d{3,4})(-?)(\d{4})$/
+
+				if(reg.test(value)){
+					numberLabel.innerHTML = "휴대전화 형식에 부합합니다";
+				}else{
+					numberLabel.innerHTML = "휴대전화 형식에 부합하지 않습니다";
+				}
+			}
+		)
+
+		var url = document.getElementById("url");
+		var urlLabel = document.querySelector("span[label='url']");
+
+		url.addEventListener(
+			"keyup",
+			function(event){
+				var value = event.target.value;
+				var reg = /^https?:\/\/((www.)?\w+(\.\w+)*)(\/\w+)*((\?\w+=\w+)(\&\w+=\w+)*)?/
+
+				if(reg.test(value)){
+					urlLabel.innerHTML = "url 형식에 부합합니다";
+				}else{
+					urlLabel.innerHTML = "url 형식에 부합하지 않습니다";
+				}
+			}
+		)
+	</script>
+	</body>
+</html>

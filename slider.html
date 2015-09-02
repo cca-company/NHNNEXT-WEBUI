@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <title>Slider menu</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style>
+    html,body{height:100%;}
+    body{
+      height:100%;
+      background:#efefef;
+      padding:0; margin:0;
+      overflow-x:scroll;
+    }
+    nav{
+      width:180px;
+      height:100%;
+      position:fixed;
+      top:0; left:0;
+      background:#444;
+    }
+      nav ul{
+        padding:0;
+        margin:20px 0 0 0;
+        list-style:none;
+      }
+      nav li{
+        padding:10px 20px;
+      }
+      nav li:hover{
+        background:#333;
+      }
+      nav a{
+        color:#fff;
+        text-decoration:none;
+      }
+
+    #toggle{
+      display:none;
+    }
+    #toggle + #container label{
+      padding:8px 10px;
+      background:#444;
+      color:#fff;
+      border-radius: 5px;
+      display:inline-block;
+      margin:10px;
+    }
+    
+    #toggle:checked + #container{
+      left:180px;
+    }
+
+    #container{
+      position:absolute;
+      background:#efefef;
+      width:100%;
+      left:0;
+      box-shadow:0px 0px 5px;
+
+      transition:left 0.5s ease-in-out;
+    }
+      #container main{
+        padding:10px;
+      }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Menu1</a></li>
+      <li><a href="#">Menu2</a></li>
+      <li><a href="#">Menu3</a></li>
+      <li><a href="#">Menu4</a></li>
+    </ul>
+  </nav>
+  <input type="checkbox" id="toggle">
+  <div id="container">
+    <label for="toggle"><i class="fa fa-reorder"></i></label>
+    <main>
+      <h1>Cascading Style Sheets</h1>
+      <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language. Although most often used to change the style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any kind of XML document, including plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.</p>
+      <p>CSS is designed primarily to enable the separation of document content from document presentation, including elements such as the layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple HTML pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content, such as semantically insignificant tables that were widely used to format pages before consistent CSS rendering was available in all major browsers. CSS makes it possible to separate presentation instructions from the HTML content in a separate file or style section of the HTML file. For each matching HTML element, it provides a list of formatting instructions. For example, a CSS rule might specify that "all heading 1 elements should be bold", leaving pure semantic HTML markup that asserts "this text is a level 1 heading" without formatting code such as a &lt;bold&gt; tag indicating how such text should be displayed.</p>
+      <p>This separation of formatting and content makes it possible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (when read out by a speech-based browser or screen reader) and on Braille-based, tactile devices. It can also be used to display the web page differently depending on the screen size or device on which it is being viewed. Although the author of a web page typically links to a CSS file within the markup file, readers can specify a different style sheet, such as a CSS file stored on their own computer, to override the one the author has specified. If the author or the reader did not link the document to a style sheet, the default style of the browser will be applied. Another advantage of CSS is that aesthetic changes to the graphic design of a document (or hundreds of documents) can be applied quickly and easily, by editing a few lines in one file, rather than by a laborious (and thus expensive) process of crawling over every document line by line, changing markup.</p>
+      <p>The CSS specification describes a priority scheme to determine which style rules apply if more than one rule matches against a particular element. In this so-called cascade, priorities (or weights) are calculated and assigned to rules, so that the results are predictable.</p>
+      <p>The CSS specifications are maintained by the World Wide Web Consortium (W3C). Internet media type (MIME type) text/css is registered for use with CSS by RFC 2318 (March 1998). The W3C operates a free CSS validation service for CSS documents.</p>
+      <h2>Syntax</h2>
+      <p>CSS has a simple syntax and uses a number of English keywords to specify the names of various style properties.</p>
+      <p>A style sheet consists of a list of rules. Each rule or rule-set consists of one or more selectors, and a declaration block.</p>
+      <h3>Selector</h3>
+      <p>In CSS, selectors are used to declare which part of the markup a style applies to by matching tags and attributes in the markup itself. Selectors may apply to:
+        <ul>
+          <li>all elements of a specific type, e.g. the second-level headers h2</li>
+          <li>elements specified by attribute, in particular:
+            <ul>
+              <li>id: an identifier unique to the document</li>
+              <li>class: an identifier that groups multiple elements in a document</li>
+            </ul>
+          </li>
+          <li>elements depending on how they are placed relative to others in the document tree.</li>
+        </ul>
+      </p>
+      <p>Classes and IDs are case-sensitive, start with letters, and can include alphanumeric characters and underscores. Any number of instances of any number of elements may have the same class. Conventionally, IDs only apply to one instance of one element.</p>
+      <p>Pseudo-classes are used in CSS selectors to permit formatting based on information that is not contained in the document tree. One example of a widely used pseudo-class is :hover, which identifies content only when the user "points to" the visible element, usually by holding the mouse cursor over it. It is appended to a selector as in a:hover or #elementid:hover. A pseudo-class classifies document elements, such as :link or :visited, whereas a pseudo-element makes a selection that may consist of partial elements, such as :first-line or :first-letter.</p>
+      <p>Selectors may be combined in many ways to achieve great specificity and flexibility.[5] Multiple selectors may be joined in a spaced list to specify elements by location, element type, id, class, or any combination thereof. The order of the selectors is important. For example, div .myClass {color:red;} applies to all elements of class myClass that are inside div elements, whereas .myClass div{color:red;} applies to all div elements that are in elements of class myClass.</p>
+    </main>
+  </div>
+</body>
+</html>

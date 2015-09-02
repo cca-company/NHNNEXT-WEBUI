@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test document</title>
+	<style>
+		*{
+			text-align:center;
+		}
+		header{
+			width:960px;
+			height:100px;
+			background:#ccc;
+		}
+
+		main{
+			width:960px;
+		}
+			div{
+				width:33%;
+				margin-right:0.5%;
+				height:300px;
+				float:left;
+			}
+			div:last-child{
+				margin:0;
+			}
+
+		main::after{
+			content:"";
+			display:block;
+			clear:both;
+		}
+
+		footer{
+			height:100px;
+			width:960px;
+			background:#333;
+		}
+
+	</style>
+</head>
+<body>
+<header>
+</header>
+<main>
+	<div class="left-box" style="background:#aaa">
+		div1
+	</div>
+	<div class="center-box" style="background:#888">
+		div2
+	</div>
+	<div class="right-box" style="background:#666">
+		div3
+	</div>
+</main>
+<footer>
+	<addr>copyright(c)2015 all right reserved.</addr>
+</footer>
+</body>
+</html>

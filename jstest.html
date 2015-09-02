@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	function randomNum(min,max){
+		return Math.round((Math.random()*10)%(max-min))+min;
+	}
+
+	function randomNum(min,max,scale){
+		var scale = scale || 1;
+		var scaleNum = Math.pow(10, scale);
+
+		return (Math.round((Math.random()*scaleNum)%(max-min)*scaleNum)+min*scaleNum)/scaleNum;
+	}
+
+	function getDateString(date){
+		var dateString = "일월화수목금토";
+		return dateString[date];
+	}
+
+	function nyTime(dateStr){
+		var time = Date.parse(dateStr);
+	}
+
+	var obj = {"prop1":"value1","prop2":20};
+	for(var name in obj){
+		console.log(name,'=',obj[name]);
+	}
+
+	outer : 
+	for(i = 0; i < 3; i++){
+
+		inner : 
+		for(j = 0; j < 3; j ++){
+			if(j == 1 && i == 1) break outer;
+			console.log('i=',i,', j=',j);
+		}
+	}
+
+	function countdown(num){
+		console.log(num--);
+		if(num > 0){
+			var timer = setTimeout(countdown,1000,num);
+		}else{
+			console.log("끝");
+		}
+	}
+
+	function countdownInterval(num){
+		var interval = setInterval(function(){
+			console.log(num--);
+			if(num < 0){
+				console.log("끝");
+				clearInterval(interval);
+			}
+		},1000);
+	}
+
+	function newWindow(width, height){
+		var screenWidth = screen.availWidth;
+		var screenHeight = screen.availHeight;
+
+		var left = (screenWidth- width)/2;
+		var top = (screenHeight- height)/2;
+
+		window.open('http://www.w3schools.com/jsref/met_win_open.asp','_blank','width='+width+',height='+height+',left='+left+',top='+top)
+
+	}
+
+	</script>
+	<body>
+	<button onclick="newWindow(400,300)">새 창 보기</button>
+	</body>
+</html>
