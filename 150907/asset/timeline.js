@@ -10,12 +10,15 @@ if (window.XMLHttpRequest) {
 
 document.addEventListener('keydown',function(e){
 	if(document.activeElement.tagName != 'INPUT'){
+		var sibling;
 		focusItem.classList.remove('focus');
 
 		if(e.keyCode == 75){
-			focusItem = focusItem.previousSibling || focusItem;
+			sibling = focusItem.previousSibling;
+			focusItem = (sibling && sibling.tagName == 'ARTICLE')? sibling : focusItem;
 		}else if(e.keyCode == 74){
-			focusItem = focusItem.nextSibling || focusItem;
+			sibling = focusItem.nextSibling;
+			focusItem = (sibling && sibling.tagName == 'ARTICLE')? sibling : focusItem;
 		}
 
 		focusItem.classList.add('focus');
