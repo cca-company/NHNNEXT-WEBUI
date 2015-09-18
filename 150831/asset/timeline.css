@@ -142,12 +142,19 @@ ul, li{
 						text-decoration: underline;
 					}
 
+					#timeline article footer .btn-box button.like-this{
+						color:#4E69AE;
+					}
+
 			#timeline article footer div.like{
 				border-top: 1px solid #ccc;
 				padding:12px;
 				padding-bottom:8px;
 				background-color:#e9eaed;
 			}
+				#timeline article footer div.like span.like-num{
+					color:#4E69AE;
+				}
 
 			#timeline article footer .comment-list{
 				padding:0px 12px 12px 12px;

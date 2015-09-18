@@ -4,7 +4,7 @@ document.addEventListener('scroll',function(){
 	var scrollHeight = document.body.scrollHeight;
 	var height = window.innerHeight;
 
-	if(height >= scrollHeight-scrollTop){
+	if(height >= scrollHeight-scrollTop - 50){
 		var timeline = document.querySelector("#timeline");
 
 		// 임시로 첫번째 데이터 복사
@@ -14,21 +14,18 @@ document.addEventListener('scroll',function(){
 	}
 });
 
-var articleList = document.querySelectorAll("article");
+document.addEventListener('click',function(e){
+	if(e.target.classList.contains("btn-like")){
+		var article = e.target.closest("article");
+		var likenum = article.querySelector(".like-num");
+		var num = parseInt(likenum.innerHTML) || 0;
 
-for(var i = 0; i < articleList.length; ++i){
-	var article = articleList[i];
-	var like = article.querySelector(".btn-like");
-	console.log(like);
-}
+		if(e.target.classList.contains("like-this")){
+			likenum.innerHTML = num-1;
+		}else{
+			likenum.innerHTML = num+1;
+		}
 
-var likeButton = document.getElementsByClassName("btn-like");
-
-for(var i = 0; i < likeButton.length; ++i){
-	likeButton[i].addEventListener("click",function(e){
-		console.log("like!");
-	})
-}
-
-function clickLikeButton(e){
-}
+		e.target.classList.toggle("like-this");
+	}
+})
