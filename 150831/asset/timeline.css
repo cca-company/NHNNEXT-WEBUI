@@ -1,0 +1,233 @@
+body{
+	padding:0;
+	margin:0;
+	background:#E9EAED;
+	font-size:12px;
+}
+
+a{
+	color:#000;
+	text-decoration:none;
+}
+
+ul, li{
+	list-style:none;
+	margin:0;
+	padding:0;	
+}
+
+	#global-header{
+		position:fixed;
+		top:0; left:0;
+		background:linear-gradient(to bottom, #4E69AE, #3B5998);
+		height:42px;
+		width:100%;
+		border-bottom: 1px solid #1C326C;
+		z-index:999;
+	}
+
+	#popup{
+		position:fixed;
+		top:0; left:0;
+		z-index:1001;
+		background:rgba(0,0,0,0.5);
+		width:100%;
+		height:100%;
+	}
+	#popup p{
+		width:500px;
+		height:500px;
+		background:#fff;
+		position:relative;
+		left:50%; margin-left:-250px;
+		top:50%; margin-top:-250px;
+	}
+	
+	main{
+		width:976px;
+		margin:42px auto 0 auto;
+	}
+
+	#left-sidebar{
+		width:164px;
+		float:left;
+		padding:10px 10px;
+	}
+		#left-sidebar ul.sidebar-profile a:hover{
+			text-decoration: underline;
+		}
+
+		#left-sidebar h3{
+			color:#999;
+			font-size:11px;
+		}
+
+		#left-sidebar li{
+			padding:5px 5px 5px 0;
+			cursor:pointer;
+		}
+
+		#left-sidebar li:hover{
+			background:#DFDFDF;
+		}
+
+		#left-sidebar ul.sidebar-profile li:hover{
+			background:none;
+		}
+
+		#left-sidebar li span.new-item-num{
+			float:right;
+		}
+
+
+	#timeline{
+		width:496px;
+		float:left;
+		padding-right:10px;
+	}
+		#timeline article{
+			width:490px;
+			background:#fff;
+			border:1px solid;
+			border-color:#e5e6e9 #dfe0e4 #d0d1d5 #dfe0e4;
+			-webkit-border-radius: 3px;
+			margin:10px 0;
+		}
+			#timeline article header{
+				padding:12px;
+			}
+
+				#timeline article header .profile-img{
+					float:left;
+					margin-right:8px;
+				}
+					#timeline article header .profile-img img{
+						width:40px; height:40px;
+						border: 1px solid #ddd;
+					}
+
+				#timeline article header .profile-text{
+					float:left;
+				}
+					#timeline article header .profile-text h2{
+						font-size:14px;
+						margin:5px 0;
+						color:#4E69AE;
+					}
+					#timeline article header .profile-text span{
+						color:#aaa;
+						margin-right:3px;
+					}
+
+			#timeline article div.content{
+				clear:both;
+				padding:12px;
+			}
+
+			#timeline article footer .btn-box{
+				border-top:1px solid #ccc;
+				margin:0 12px 12px 12px;
+				padding-top:12px;
+			}
+				#timeline article footer .btn-box button{
+					border:none;
+					background:#fff;
+					color:#999;
+					font-weight:bold;
+					font-size:12px;
+					margin-right:15px;
+					padding:0;
+				}
+					#timeline article footer .btn-box button:hover{
+						text-decoration: underline;
+					}
+
+			#timeline article footer div.like{
+				border-top: 1px solid #ccc;
+				padding:12px;
+				padding-bottom:8px;
+				background-color:#e9eaed;
+			}
+
+			#timeline article footer .comment-list{
+				padding:0px 12px 12px 12px;
+				background-color:#e9eaed;
+			}
+
+				#timeline article footer .comment-list li{
+					padding-top:10px;
+					margin:0;
+					clear:both;
+				}
+
+					#timeline article footer .comment-list li br{
+						clear:both;
+					}
+					#timeline article footer .comment-list li .profile-img{
+						float:left;
+						margin-right:5px;
+					}
+
+						#timeline article footer .comment-list li .profile-img img{
+							width:30px; height:30px;
+							border:1px solid #ccc;
+						}
+
+					#timeline article footer .comment-list li .comment-content{
+						float:left;
+					}
+
+						#timeline article footer .comment-list li .comment-content .comment-name{
+							font-size:12px;
+							color:#4E69AE;
+							font-weight:bold;
+						}
+
+						#timeline article footer .comment-list li .comment-content .comment-btn-box{
+							color:#999;
+							margin-top:3px;
+						}
+
+						#timeline article footer .comment-list li .comment-content .comment-btn-box a{
+							color:#4E69AE;
+						}
+							#timeline article footer .comment-list li .comment-content .comment-btn-box a:hover{
+								text-decoration:underline;
+							}
+							#timeline article footer .comment-list li .comment-content .comment-btn-box a::after{
+								content:" ·";
+							}
+
+				#timeline article footer .comment-list .prev{
+					border-top:1px solid #ccc;
+				}					
+					#timeline article footer .comment-list .prev .btn-prev{
+						float:left;
+						color:#4E69AE;
+					}	
+					#timeline article footer .comment-list .prev .comment-num{
+						float:right;
+						font-weight:bold;
+						color:#999;
+					}
+
+
+	#right-column{
+		float:left;
+		width:276px;
+		margin-top:12px;
+	}
+
+	#right-column div.content{
+		width:260px;
+		padding:12px;
+		background:#fff;
+		border:1px solid;
+		border-color:#e5e6e9 #dfe0e4 #d0d1d5 #dfe0e4;
+		-webkit-border-radius: 3px;
+	}
+
+	#right-column footer{
+		color:#999;
+		padding:10px;
+	}
