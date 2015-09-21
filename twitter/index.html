@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Twitter</title>
+		<link rel="stylesheet" media="screen" href="asset/common.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<nav>
+					<ul>
+						<li class="current-menu" id="nav-btn-home"><i class="fa fa-home fa-lg"></i> Home</li>
+						<li id="nav-btn-noti"><i class="fa fa-bell fa-lg"></i> Notifications</li>
+						<li id="nav-btn-message"><i class="fa fa-envelope fa-lg"></i> Messages</li>
+					</ul>
+				</nav>
+				<h1><i class="fa fa-twitter"></i></h1>
+			</div>
+		</header>
+		<main>
+			<section id="profile">
+				<div class="profile-header"></div>
+				<div class="profile-box">
+					<div class="profile-img">
+						<img src="profile.jpg" />
+					</div>
+					<h2 class="profile-name">Seo, DongYu</h2>
+					<span class="profile-id">@Dongyu</span>
+					<ul class="profile-stat">
+						<li class="stat-tweets">
+							<h3>TWEETS</h3>
+							<span>10.4k</span>
+						</li>
+						<li class="stat-following">
+							<h3>FOLLOWING</h3>
+							<span>256</span>
+						</li>
+						<li class="stat-followers">
+							<h3>FOLLOWERS</h3>
+							<span>3874</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="timeline">
+				<div id="tweet-form-box">
+					<img class="profile-img" src="profile.jpg" />
+					<form id="tweet-form" onsubmit="return false;" name="tweet-form">
+						<textarea id="tweet-content" name="tweet-content" placeholder="무슨 일이 일어나고 있나요?"></textarea>
+						<div class="form-btn-box">
+							<span class="word-num">140</span>
+							<button id="tweet-btn" type="submit"><i class="fa fa-pencil-square-o"></i> Tweet</button>
+						</div>
+					</form>
+				</div>
+				<div id="tweet-list">
+					<article class="temp" data-id="0">
+						<img class="profile-img" src="http://placekitten.com/g/50/50" />
+						<div class="tweet-box">
+							<span class="profile-name"></span>
+							<span class="regdate"></span>
+							<div class="tweet-content"></div>
+							<ul class="btn-list">
+								<li class="btn-reply"><i class="fa fa-reply fa-lg"></i></li>
+								<li class="btn-retweet"><i class="fa fa-retweet fa-lg"></i><span class="retweet-num"></span></li>
+								<li class="btn-favorit"><i class="fa fa-star fa-lg"></i></i><span class="favorit-num"></span></li>
+							</ul>
+						</div>
+					</article>
+				</div>
+				<div class="footer">
+					<i class="fa fa-circle-o-notch fa-spin"></i>
+				</div>
+			</section>
+		</main>
+	</body>
+	<script type="text/javascript" src="asset/twitter.js"></script>
+</html>
